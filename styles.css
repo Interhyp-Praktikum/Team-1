@@ -1,0 +1,10 @@
+/* hier kannst du deine HTML Tags eintragen
+eine Übersicht über alle Eigenschaften gibt es hier: https://wiki.selfhtml.org/wiki/CSS/Schnell-Index*/
+
+h1 {
+  color: palevioletred;
+}
+
+.error {
+  color: darkred;
+}
