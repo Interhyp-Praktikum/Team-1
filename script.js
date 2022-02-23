@@ -39,5 +39,5 @@ window.sucheErgebnisse = function () {
   console.log(WerteAusDemFarbenFeld);
 
   var ergebnisse = document.querySelector("#ergebnisse");
-  ergebnisse.innerHTML = '<img width="300px" src="' + outfit1.bild + '"></img>';
+  ergebnisse.innerHTML = `<img width="300px" src="${outfit1.bild}"></img>`;
 };
