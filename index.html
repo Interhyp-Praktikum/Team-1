@@ -5,77 +5,69 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body> 
     <!--hier kannst du deine HTML Tags eintragen-->
     <!--eine Übersicht über alle Tags gibt es hier: https://wiki.selfhtml.org/wiki/HTML/Elemente -->
 
     <header>
       <h1>Was ziehe ich heute an?</h1>
       <div class="container">
-      <div class="box">
-        <input class="suche"></input>
-        <br />
-        <button onclick="sucheErgebnisse()">Suchen</button>
+        <div class="box">
+          <input class="suche"></input>
+          <br />
+          <button onclick="sucheErgebnisse()">Suchen</button>
+        </div>
+
+        <div class="box">
+          <img class="Bild" src="https://juliesdresscode.de/wp-content/uploads/2020/06/OutfitsKombinierenJuliesDresscode-13.jpeg" width="520px" ></img>
+        </div>
+
+
+        <div class="box">      
+          <select class="Jahreszeiten">
+            <option>Frühling</option>
+            <option>Sommer</option>
+            <option>Herbst</option>
+            <option>Winter</option>
+          </select>
+          
+          <select class="Aktivität">
+            <option>Indoor Sport</option>
+            <option>Outdoor Sport</option>
+            <option>Couch</option>
+            <option>Spazieren</option>
+            <option>Wandern</option>
+            <option>Skifahren</option>
+          </select>
+          <br />
+          <select class="Material">
+            <option>Polyester</option>
+            <option>Baumwolle</option>
+            <option>Wasserdicht</option>
+            <option>Seide</option>
+          </select>
+          <select class="Farbe">
+            <option>Blau</option>
+            <option>Weiß</option>
+            <option>Grau</option>
+            <option>Schwarz</option>
+            <option>Gelb</option>
+            <option>Rot</option>
+          </select>
       </div>
-
-      <div class="box">
-        <img class="Bild" src="https://juliesdresscode.de/wp-content/uploads/2020/06/OutfitsKombinierenJuliesDresscode-13.jpeg" width="520px" ></img>
-      </div>
-
-
-      <div class="box">      
-        <select class="Jahreszeiten">
-          <option>Frühling</option>
-          <option>Sommer</option>
-          <option>Herbst</option>
-          <option>Winter</option>
-        </select>
-        
-        <select class="Aktivität">
-          <option>Indoor Sport</option>
-          <option>Outdoor Sport</option>
-          <option>Couch</option>
-          <option>Spazieren</option>
-          <option>Wandern</option>
-          <option>Skifahren</option>
-        </select>
-        <br />
-        <select>
-          <option>Polyester</option>
-          <option>Baumwolle</option>
-          <option>Wasserdicht</option>
-          <option>Seide</option>
-        </select>
-        <select>
-          <option>Blau</option>
-          <option>Weiß</option>
-          <option>Grau</option>
-          <option>Schwarz</option>
-          <option>Gelb</option>
-          <option>Rot</option>
-        </select>
-    </div>
   </div>
+</header>
 
-
-    </header>
     <main>
       Mögliche Ergebnisse (nach Filterauswahl):
-      <br />
-      <br />
-      <br />
+      <div id="ergebnisse"></div>
     </main>
+
     <div class="footer">
       <button class="kontakt">
         <a href="mailto:felix.h.winterholler@gmail.com">Kundenservice</a>
       </button>
     </div>
-    <!-- <input placeholder="Dein Name"></input>
-    <button onclick="holeDenWert()">Klick mich</button>
-    <p id="error" class="error"></p>
-
-    <h2>Hallo<span id="name"></span></h2>
-    -->
 
     <script src="script.js"></script>
   </body>
