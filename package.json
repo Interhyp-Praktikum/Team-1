@@ -1,22 +1,19 @@
 {
-  "name": "test",
+  "name": "vanilla",
   "version": "1.0.0",
-  "description": "timon",
+  "description": "JavaScript example starter project",
+  "main": "index.html",
   "scripts": {
-    "start": "serve html/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Interhyp-Praktikum/Test.git"
+  "dependencies": { "parcel-bundler": "^1.6.1" },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "typescript": "4.4.4"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Interhyp-Praktikum/Test/issues"
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
   },
-  "homepage": "https://github.com/Interhyp-Praktikum/Test#readme",
-  "dependencies": {
-    "serve": "^13.0.2"
-  }
+  "keywords": ["javascript", "starter"]
 }

@@ -8,7 +8,9 @@ h1 {
 
 header {
   background: lightgrey;
+  color: red;
 }
+
 main {
   border: 1px solid black;
 }
