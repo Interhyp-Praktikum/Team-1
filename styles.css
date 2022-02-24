@@ -1,21 +1,38 @@
-/* hier kannst du deine HTML Tags eintragen
-eine Übersicht über alle Eigenschaften gibt es hier: https://wiki.selfhtml.org/wiki/CSS/Schnell-Index*/
+*,
+html {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  z-index: 10;
+  position: relative;
+}
+
+body,
+video {
+  padding: 0;
+  margin: 0;
+}
+
+.inhalt {
+  max-width: 900px;
+  margin: auto;
+}
 
 h1 {
-  color: green;
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(139, 39, 0);
 }
 
 header {
-  background: lightgrey;
+  padding: 15px;
+  z-index: 10;
 }
+
 main {
-  border: 1px solid black;
+  padding: 15px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 900px) {
@@ -25,8 +42,30 @@ main {
 }
 
 button {
-  background: black;
-  color: white;
+  background: rgb(50, 50, 50);
+  color: rgb(192, 54, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: rgb(80, 80, 80);
+}
+
+input,
+select {
+  padding: 8px;
+  margin: 2px;
+}
+
+select {
+  cursor: pointer;
+}
+
+.box {
+  margin: 10px;
 }
 
 .footer {
@@ -46,6 +85,126 @@ button a {
   text-decoration: none;
 }
 
-.Bild {
-  border-radius: 23%;
+#myVideo {
+  animation: fadein 8s 0s forwards;
+  position: fixed;
+  z-index: 0;
+  object-fit: cover;
+  height: 100vh;
+  opacity: 0;
+}
+
+.ergebnis {
+  background-color: grey;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  color: white;
+  width: 300px;
+  animation: zoomInDown 1.5s linear;
+}
+
+.ergebnis img {
+  object-fit: contain;
+}
+
+.ergebnisse {
+  margin-bottom: 20px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.Icon {
+  display: inline-block;
+  margin-top: -20px;
+}
+
+.Icon img {
+  height: 50px;
+  top: 20px;
+}
+.blau {
+  color: blue;
+}
+.weiß {
+  color: white;
+  background-color: black;
+}
+.schwarz {
+  color: black;
+}
+.grau {
+  color: darkgray;
+}
+.gelb {
+  color: yellow;
+}
+.rot {
+  color: red;
+}
+.rose {
+  color: pink;
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes zoomInDown {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+  }
+
+  60% {
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
