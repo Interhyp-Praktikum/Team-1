@@ -81,7 +81,7 @@ select {
 }
 
 button a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -92,6 +92,12 @@ button a {
   object-fit: cover;
   height: 100vh;
   opacity: 0;
+}
+
+#ergebnisse {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .ergebnis {
@@ -106,10 +112,6 @@ button a {
 
 .ergebnis img {
   object-fit: contain;
-}
-
-.ergebnisse {
-  margin-bottom: 20px;
 }
 
 @keyframes fadein {
@@ -207,4 +209,13 @@ button a {
   50% {
     opacity: 1;
   }
+}
+
+#resetbutton {
+  display: block;
+  margin: auto;
+}
+
+.box-right {
+  max-width: 300px;
 }
