@@ -1,13 +1,12 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Mein erstes Projekt</title>
+    <title>Outfit-Generator</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="favicon.ico">
   </head>
-  <body> 
-    <!--hier kannst du deine HTML Tags eintragen-->
-    <!--eine Übersicht über alle Tags gibt es hier: https://wiki.selfhtml.org/wiki/HTML/Elemente -->                                                         
+  <body>                                                    
     <video autoplay muted loop id="myVideo" width="100%">
         <source id="videoSource" src="https://github.com/Interhyp-Praktikum/Team-1/blob/main/video.mp4?raw=true" type="video/mp4" >
     </video>
@@ -27,7 +26,7 @@
           <button onclick="sucheErgebnisse()">Suchen</button>
         </div>
 
-      <div class="box">      
+      <div class="box box-right">      
         <select class="Jahreszeiten" onchange="sucheErgebnisse(); switchVideo(this)">
           <option value="" hidden>Jahreszeit</option>
           <option>Frühling</option>
@@ -38,13 +37,13 @@
         
         <select class="Aktivität" onchange="sucheErgebnisse()">
           <option value="" hidden>Aktivität</option>
-          <option>Indoor Sport</option>
-          <option>Outdoor Sport</option>
-          <option>Couch</option>
-          <option>Spazieren</option>
-          <option>Wandern</option>
-          <option>Skifahren</option>
-          <option>Event</option>
+          <option>🤾‍♂️ Indoor Sport</option>
+          <option>⚽ Outdoor Sport</option>
+          <option>🛋️ Couch</option>
+          <option>🚶🏽‍♀️ Spazieren</option>
+          <option>🥾 Wandern</option>
+          <option>🎿 Skifahren</option>
+          <option>🎫 Event</option>
         </select>
         <br />
         <select class="Material" onchange="sucheErgebnisse()">
@@ -64,7 +63,9 @@
           <option class="gelb">Gelb</option>
           <option class="rot">Rot</option>
           <option class="rose">Rose</option>
+          <option class="braun">Braun</option>
         </select>
+        <button id="resetbutton" onclick="zuruecksetzen()">zurücksetzen</button>
     </div>
   </div>
 </header>
@@ -76,9 +77,10 @@
 
   </div>
 
+
     <div class="footer">
       <button class="kontakt">
-        <a href="mailto:felix.h.winterholler@gmail.com">Kundenservice</a>
+        <a href="mailto:max.mustermann@mail.muc?subject=Kundenservice:%20Anfrage%20zur%20Website&amp;body=Hallo%20liebes%20Support-Team,%0D%0A%0D%0Aich%20brauche%20Hilfe%20mit:%0D%0A%0D%0AMit%20freundlichen%20Grüßen,">Kundenservice</a>
       </button>
     </div>
 
