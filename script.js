@@ -267,13 +267,13 @@ var outfit25 = {
 
 var outfit26 = {
   bild:
-    "https://images.bstatic.de/5AYZYYVzYy3BD_Wufn0Qrqq_dNg=/956x540/filters:focal(942x670:962x690)/images/1fa88eed/2044/4e44/b97b/42f0d1b4d19b.jpg",
-  jahreszeit: "",
-  material: "",
-  aktivität: "",
-  farbe: [""],
-  suchbegriffe: [""],
-  beschreibung: ""
+    "https://i.pinimg.com/736x/46/2a/f8/462af8118bc9a837e6cf3cab7f24d841--daily-outfit-fashion-fall.jpg",
+  jahreszeit: "Herbst",
+  material: "Leder",
+  aktivität: "Spazieren",
+  farbe: ["Schwarz"],
+  suchbegriffe: ["Lederjacke"],
+  beschreibung: "Ein stylisch, cooles Outfit für den Alltag"
 };
 
 var outfits = [
@@ -301,12 +301,8 @@ var outfits = [
   outfit22,
   outfit23,
   outfit24,
-  outfit25
-  //outfit26,
-  //outfit27,
-  //outfit28,
-  //outfit29,
-  //outfit30,
+  outfit25,
+  outfit26
 ];
 
 window.sucheErgebnisse = function () {
@@ -386,7 +382,11 @@ window.switchVideo = function (selectElement) {
   var source = document.querySelector("#videoSource");
   var jahreszeit = selectElement.value;
   Video.pause();
-  source.src = `https://github.com/Interhyp-Praktikum/Team-1/blob/main/${jahreszeit}.mp4?raw=true`;
+  if (jahreszeit === "") {
+    source.src = `https://github.com/Interhyp-Praktikum/Team-1/blob/main/video.mp4?raw=true`;
+  } else {
+    source.src = `https://github.com/Interhyp-Praktikum/Team-1/blob/main/${jahreszeit}.mp4?raw=true`;
+  }
   Video.load();
   Video.play();
 };
@@ -394,6 +394,7 @@ window.switchVideo = function (selectElement) {
 window.resetElementValue = function (selektor) {
   var element = document.querySelector(selektor);
   element.value = "";
+  element.dispatchEvent(new Event("change"));
 };
 
 window.zuruecksetzen = function () {
@@ -401,5 +402,4 @@ window.zuruecksetzen = function () {
   window.resetElementValue(".Aktivität");
   window.resetElementValue(".Material");
   window.resetElementValue(".Farbe");
-  window.sucheErgebnisse();
 };
