@@ -232,6 +232,50 @@ var outfit22 = {
   beschreibung: "Bauchfreies Sommer-Top in Weiß für Teenager"
 };
 
+var outfit23 = {
+  bild: "",
+  jahreszeit:
+    "https://litb-cgis.rightinthebox.com/images/190x250/cateimg/202202/3d3519f6e70f1fc87412089df3c2453e.jpg?fmt=webp&v=1",
+  material: "Baumwolle",
+  aktivität: "Couch",
+  farbe: ["Grau"],
+  suchbegriffe: ["Katzenpullover"],
+  beschreibung: "Ein cooler Pullover mit einer Katze"
+};
+
+var outfit24 = {
+  bild:
+    "https://litb-cgis.rightinthebox.com/images/640x853/202112/bps/product/inc/deuwdy1640141701804.jpg?fmt=webp&v=1",
+  jahreszeit: "Frühling",
+  material: "Baumwolle",
+  aktivität: "Spazieren",
+  farbe: ["Blau"],
+  suchbegriffe: ["USA"],
+  beschreibung: "Hoodie mit Liebe zu den USA"
+};
+
+var outfit25 = {
+  bild:
+    "https://images.bstatic.de/5AYZYYVzYy3BD_Wufn0Qrqq_dNg=/956x540/filters:focal(942x670:962x690)/images/1fa88eed/2044/4e44/b97b/42f0d1b4d19b.jpg",
+  jahreszeit: "Herbst",
+  material: "Baumwolle",
+  aktivität: "Spazieren",
+  farbe: ["Braun"],
+  suchbegriffe: ["stylisches Herbstoutfit"],
+  beschreibung: "Ein stylisches Outfit für den Herbst"
+};
+
+var outfit26 = {
+  bild:
+    "https://images.bstatic.de/5AYZYYVzYy3BD_Wufn0Qrqq_dNg=/956x540/filters:focal(942x670:962x690)/images/1fa88eed/2044/4e44/b97b/42f0d1b4d19b.jpg",
+  jahreszeit: "",
+  material: "",
+  aktivität: "",
+  farbe: [""],
+  suchbegriffe: [""],
+  beschreibung: ""
+};
+
 var outfits = [
   outfit1,
   outfit2,
@@ -254,7 +298,15 @@ var outfits = [
   outfit19,
   outfit20,
   outfit21,
-  outfit22
+  outfit22,
+  outfit23,
+  outfit24,
+  outfit25
+  //outfit26,
+  //outfit27,
+  //outfit28,
+  //outfit29,
+  //outfit30,
 ];
 
 window.sucheErgebnisse = function () {
@@ -337,4 +389,17 @@ window.switchVideo = function (selectElement) {
   source.src = `https://github.com/Interhyp-Praktikum/Team-1/blob/main/${jahreszeit}.mp4?raw=true`;
   Video.load();
   Video.play();
+};
+
+window.resetElementValue = function (selektor) {
+  var element = document.querySelector(selektor);
+  element.value = "";
+};
+
+window.zuruecksetzen = function () {
+  window.resetElementValue(".Jahreszeiten");
+  window.resetElementValue(".Aktivität");
+  window.resetElementValue(".Material");
+  window.resetElementValue(".Farbe");
+  window.sucheErgebnisse();
 };
