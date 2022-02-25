@@ -233,8 +233,9 @@ var outfit22 = {
 };
 
 var outfit23 = {
-  bild: "https://litb-cgis.rightinthebox.com/images/190x250/cateimg/202202/3d3519f6e70f1fc87412089df3c2453e.jpg?fmt=webp&v=1",
-  jahreszeit:"Frühling",
+  bild:
+    "https://litb-cgis.rightinthebox.com/images/190x250/cateimg/202202/3d3519f6e70f1fc87412089df3c2453e.jpg?fmt=webp&v=1",
+  jahreszeit: "Frühling",
   material: "Baumwolle",
   aktivität: "Couch",
   farbe: ["Grau"],
